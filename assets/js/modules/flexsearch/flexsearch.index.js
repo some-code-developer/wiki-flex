@@ -55,7 +55,14 @@ function initIndex() {
       {
         id: {{ $index }},
         href: "{{ $url }}",
-        title: {{ $title | jsonify }},
+        // title: {{ $title | jsonify }},
+     
+        {{ with .Params.searchtitle -}}
+           title: {{ . | jsonify }}, 
+        {{ else -}}
+           title: {{ $title | jsonify }},
+        {{ end -}}
+     
         {{ with .Description -}}
           description: {{ . | jsonify }},
         {{ else -}}

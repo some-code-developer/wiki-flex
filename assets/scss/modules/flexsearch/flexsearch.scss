@@ -106,7 +106,8 @@ $search-background:                                    url("/icons/search.svg") 
 
 @include media-breakpoint-up(sm) {
     .search-suggestions {
-        width: 31.125rem;
+        // width: 31.125rem;
+        width: calc(100vw - 20em);
     }
 
     .search-modal .search-suggestions {
@@ -135,8 +136,9 @@ $search-background:                                    url("/icons/search.svg") 
     }
 
     .search-modal .suggestion__description {
-        width: 100% !important;
-    }
+        // width: 100% !important;
+        width: calc((100vw - 20em)-((100vw - 20em)/5));
+        padding-left: 1rem;
 }
 
 .search-background {
