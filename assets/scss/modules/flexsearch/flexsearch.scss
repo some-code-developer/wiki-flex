@@ -131,14 +131,12 @@ $search-background:                                    url("/icons/search.svg") 
     }
 
     .suggestion__description {
-        width: 19rem;
-        padding-left: 1rem;
-    }
+        width: calc((100vw - 20em)-((100vw - 20em)/5));
+            padding-left: 1rem;
+          }
 
     .search-modal .suggestion__description {
-        // width: 100% !important;
-        width: calc((100vw - 20em)-((100vw - 20em)/5));
-        padding-left: 1rem;
+        width: 100% !important;
   } 
 }
 
